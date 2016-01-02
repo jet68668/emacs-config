@@ -13,6 +13,8 @@
 
 
 (global-set-key (kbd "C-x w") 'other-window)
+(global-unset-key (kbd "C-x C-b"))
+(global-set-key (kbd "C-x C-B") 'buffer-menu)
 (global-set-key (kbd "C-x x") 'execute-extended-command)
 
 (add-to-list 'load-path "~/.emacs.d/my-config/")
