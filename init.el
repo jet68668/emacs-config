@@ -14,7 +14,7 @@
 
 (global-set-key (kbd "C-x w") 'other-window)
 (global-unset-key (kbd "C-x C-b"))
-(global-set-key (kbd "C-x C-B") 'buffer-menu)
+(global-set-key (kbd "C-x C-b") 'buffer-menu)
 (global-set-key (kbd "C-x x") 'execute-extended-command)
 
 (add-to-list 'load-path "~/.emacs.d/my-config/")
@@ -37,5 +37,19 @@
 (defun gtd()
   (interactive)
   (find-file "~/.org/gtd-org/tasks.org"))
+
 ;;show line num
 (global-linum-mode t)
+
+;;company code complete
+(add-hook 'after-init-hook 'global-company-mode)
+
+;;jump to tags
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+	      (ggtags-mode 1))))
+;; imenu for tag-list
+;;(defun try-to-add-imenu ()
+;;  (condition-case nil (imenu-add-to-menubar "myImenu") (error nil)))
+;; (add-hook 'font-lock-mode-hook 'try-to-add-imenu)

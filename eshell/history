@@ -1,0 +1,38 @@
+ls
+gcc demo01.c 
+gcc demo01.c 
+./a.out 
+gcc demo01.c 
+./a.out 
+./a.out 
+gcc demo01.c 
+gcc demo01.c 
+gcc demo01.c 
+./a.out 
+ll
+li
+ls
+alias ll="ls -al"
+ll
+ll
+ll
+ll
+ll
+cs
+cs
+gcc -g demo01.c 
+gdb
+gdb ./a.out.dSYM/
+gcc demo01.c 
+gcc demo01.c 
+./a.out.dSYM/
+ls
+ll
+cd ../
+ls
+rm -rf a.out.dSYM/
+./a.out 
+gcc demo01.c 
+gcc demo01.c 
+./a
+./a.out 
