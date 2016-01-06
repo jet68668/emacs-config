@@ -49,7 +49,20 @@
 	  (lambda ()
 	    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
 	      (ggtags-mode 1))))
-;; imenu for tag-list
+;;tag-list imenu-case
 ;;(defun try-to-add-imenu ()
 ;;  (condition-case nil (imenu-add-to-menubar "myImenu") (error nil)))
 ;; (add-hook 'font-lock-mode-hook 'try-to-add-imenu)
+
+;;tag-list speedbar-case
+(add-to-list 'load-path "~/.emacs.d/sr-speedbar/")
+(require 'sr-speedbar)
+(global-set-key (kbd "C-x t") 'taglist-open)
+
+(defun taglist-open()
+  (interactive)
+  (if (sr-speedbar-exist-p)
+      (sr-speedbar-close)
+    (progn
+      (sr-speedbar-open)
+      (sr-speedbar-select-window))))
