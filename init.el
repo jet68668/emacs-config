@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (setq inferior-lisp-program "/usr/local/bin/sbcl")
 (add-to-list 'load-path "~/.emacs.d/slime/")
 (require 'slime-autoloads)
@@ -6,16 +13,17 @@
 (setq make-backup-files nil)
 
 ;;color-theme
-(add-to-list 'load-path "~/.emacs.d/color-theme/")
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-gray30)
+;;(add-to-list 'load-path "~/.emacs.d/color-theme/")
+;;(require 'color-theme)
+;;(color-theme-initialize)
+;;(color-theme-gray30)
 
 
 (global-set-key (kbd "C-x w") 'other-window)
 (global-unset-key (kbd "C-x C-b"))
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 (global-set-key (kbd "C-x x") 'execute-extended-command)
+(global-set-key (kbd "C-x g") 'goto-line)
 
 (add-to-list 'load-path "~/.emacs.d/my-config/")
 ;;use latex to export pdf file in org-mode
