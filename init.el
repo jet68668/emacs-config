@@ -74,3 +74,8 @@
     (progn
       (sr-speedbar-open)
       (sr-speedbar-select-window))))
+
+;;go-mode
+
+(add-to-list 'load-path "~/.emacs.d/go-mode")
+(require 'go-mode-autoloads)
