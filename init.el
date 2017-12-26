@@ -11,6 +11,7 @@
 (slime-setup '(slime-fancy))
 
 (setq make-backup-files nil)
+(setq auto-save-default nil) 
 
 ;;color-theme
 ;;(add-to-list 'load-path "~/.emacs.d/color-theme/")
@@ -35,9 +36,9 @@
 (global-set-key (kbd "M-p") 'ace-window)
 
 ;;org tags
-;;(setq org-todo-keywords
-;;      '((sequence "TODO(t!)" "NEXT(n)" "WAITING(w)" "HOLD(h)" "DELAY(e)" "|" "CANCEL(c@/!)" "DONE(d@/!)")
-;;	))
+(setq org-todo-keywords
+      '((sequence "TODO(t!)" "NEXT(n)" "WAITING(w)" "HOLD(h)" "DELAY(e)" "|" "CANCEL(c@/!)" "DONE(d@/!)")
+	))
 ;;agenda
 (setq org-agenda-files (quote ("~/.org/gtd-org/tasks.org")))
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -79,3 +80,44 @@
 
 (add-to-list 'load-path "~/.emacs.d/go-mode")
 (require 'go-mode-autoloads)
+
+;; reload buffer
+(defun reload()
+  (interactive)
+  (revert-buffer))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files (quote ("~/source/tmp/test.org"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;;remember-list
+(global-set-key (kbd "C-c r") 'remember)
+(global-set-key (kbd "C-c C-r") 'remember-notes)
+
+;;goto end of buffer
+(global-set-key (kbd "C-c e") 'end-of-buffer)
+(global-set-key (kbd "C-c s") 'beginning-of-buffer)
+
+;;GTD collect project temp
+;;(org-capture-import-remember-templates)
+;;(setq org-directory "~/GTD")
+
+;;org refile-target
+(custom-set-variables
+ '(org-refile-targets (quote
+		       (("inbox.org" :level . 1) ("project.org" :level . 1) ("finished.org" :level . 1)
+			))))
+
+;;remember instance
+(global-set-key (kbd "C-c t") 'org-capture)
+(setq org-capture-templates
+      '(("t" "TODO" entry (file+headline "~/GTD/inbox.org" "Task")
+	 "** TODO %T\n%? %i\n %a")))
