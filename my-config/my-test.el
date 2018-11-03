@@ -57,9 +57,9 @@
 (global-set-key (kbd "C-c t") 'org-capture)
 (setq org-capture-templates
       '(("t" "TODO" entry (file+headline "~/GTD/inbox.org" "Todo")
-	 "* task begin:%?  %T\n %\i\n %a")
-	("n" "Note" entry (file+headline "~/GTD/notes.org" "Note")
-	 "* Note add:%? %T\n %i\n %a")
+	 "** Task begin: %T\n %i \n %?")
+	("n" "NOTE" entry (file+headline "~/GTD/notes.org" "Note")
+	 "** Note add: %T\n %i\n %?")
 ;;       	("b" "Book" entry (file+headline "~/GTD/books.org" "Reading")
 ;;	 "* Reading %T\n%?%i\n")
 	))
