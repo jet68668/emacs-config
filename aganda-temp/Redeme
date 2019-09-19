@@ -1,0 +1,7 @@
+emacs - org
+C-c a    打开日历
+C-c t    记录Todo or Note
+C-c C-t 切换Todo or Done
+C-c i     切换文件
+C-c C-s 设置开始时间
+C-c C-d 设置截止时间

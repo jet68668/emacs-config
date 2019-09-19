@@ -49,7 +49,7 @@
     (("~/GTD/inbox.org" :level . 1)
      ("~/GTD/finished.org" :level . 1)
      ("~/GTD/calender.org" :level . 1)
-     ("~/GTD/book.org" :level . 1)
+     ("~/GTD/books.org" :level . 1)
      ("~/GTD/project.org" :level . 1)
      ("~/GTD/notes.org" :level . 1)))))
 

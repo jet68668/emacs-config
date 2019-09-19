@@ -5,10 +5,10 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(setq inferior-lisp-program "/usr/local/bin/sbcl")
-(add-to-list 'load-path "~/.emacs.d/slime/")
-(require 'slime-autoloads)
-(slime-setup '(slime-fancy))
+;;(setq inferior-lisp-program "/usr/local/bin/sbcl")
+;;(add-to-list 'load-path "~/.emacs.d/slime/")
+;;(require 'slime-autoloads)
+;;(slime-setup '(slime-fancy))
 
 (setq make-backup-files nil)
 (setq auto-save-default nil) 
@@ -29,7 +29,7 @@
 (add-to-list 'load-path "~/.emacs.d/my-config/")
 ;;use latex to export pdf file in org-mode
 (setq org-log-done 'time)
-(load "my-org-latex")
+;;(load "my-org-latex")
 (load "my-test")
 
 ;;ace-windows
@@ -91,8 +91,8 @@
 (global-set-key (kbd "C-c s") 'beginning-of-buffer)
 
 ;;projectile
-(add-to-list 'load-path "~/.emacs.d/projectile/")
-(require 'projectile)
-(projectile-global-mode)
-(setq projectile-enable-caching t)
-(global-set-key (kbd "C-c f") 'projectile-find-file)
+;;(add-to-list 'load-path "~/.emacs.d/projectile/")
+;;(require 'projectile)
+;;(projectile-global-mode)
+;;(setq projectile-enable-caching t)
+;;(global-set-key (kbd "C-c f") 'projectile-find-file)
