@@ -67,3 +67,7 @@
 
 ;;bind eval fun
 (global-set-key (kbd "C-c C-c") 'eval-last-sexp)
+
+;;;;htmlize
+(add-to-list 'load-path "~/.emacs.d/my-config/emacs-htmlize/")
+(require 'htmlize)

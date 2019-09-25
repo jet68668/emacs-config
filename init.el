@@ -14,10 +14,10 @@
 (setq auto-save-default nil) 
 
 ;;color-theme
-;;(add-to-list 'load-path "~/.emacs.d/color-theme/")
-;;(require 'color-theme)
-;;(color-theme-initialize)
-;;(color-theme-gray30)
+(add-to-list 'load-path "~/.emacs.d/color-theme/")
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-midnight)
 
 
 (global-set-key (kbd "C-x w") 'other-window)
@@ -96,3 +96,19 @@
 ;;(projectile-global-mode)
 ;;(setq projectile-enable-caching t)
 ;;(global-set-key (kbd "C-c f") 'projectile-find-file)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files
+   (list "~/GTD/inbox.org" "~/GTD/calender.org" "~/GTD/books.org" "~/GTD/finished.org" "~/GTD/project.org" "~/GTD/notes.org"))
+ '(org-refile-targets
+   (quote
+    (("~/GTD/inbox.org" :level . 1)
+     ("~/GTD/finished.org" :level . 1)
+     ("~/GTD/calender.org" :level . 1)
+     ("~/GTD/books.org" :level . 1)
+     ("~/GTD/project.org" :level . 1)
+     ("~/GTD/notes.org" :level . 1))))
+ '(package-selected-packages (quote (yasnippet js2-mode ggtags company ace-window))))
