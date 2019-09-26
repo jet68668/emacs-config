@@ -60,7 +60,7 @@
 ;;tag-list speedbar-case
 (add-to-list 'load-path "~/.emacs.d/sr-speedbar/")
 (require 'sr-speedbar)
-(global-set-key (kbd "C-x t") 'taglist-open)
+(global-set-key (kbd "<f7>") 'taglist-open)
 
 (defun taglist-open()
   (interactive)
@@ -113,3 +113,14 @@
      ("~/GTD/project.org" :level . 1)
      ("~/GTD/notes.org" :level . 1))))
  '(package-selected-packages (quote (yasnippet js2-mode ggtags company ace-window))))
+
+
+;;tree file explore
+(add-to-list 'load-path "~/.emacs.d/emacs-neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
+;;switch-window
+(add-to-list 'load-path "~/.emacs.d/switch-window/")
+(require 'switch-window)
+(global-set-key (kbd "C-x w") 'switch-window)

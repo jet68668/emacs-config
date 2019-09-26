@@ -1,6 +1,3 @@
-# emacs-config
-my-local-emacs-dir
-
 emacs - org
 C-c a    打开日历
 C-c t    记录Todo or Note
@@ -15,9 +12,9 @@ C-c ? 当前表格位置
 
 矩形
  C-space or C-@ 标记
-C-x r c 矩形清除，保留空白
-C-x r k 矩形删除，不保留
-C-x r t 前插入字符
+ C-x r c 矩形清除，保留空白
+ C-x r k 矩形删除，不保留
+ C-x r t 前插入字符
 
 跳转 （安装global并执行gtags）
 M-r 本页上中下跳转
@@ -27,6 +24,11 @@ M-, 定义跳回
 ggtags-find-tag-dwim 查找定义
 M-n M-p next/prev match
 
+neo-tree
+[f8]  open-neo-tree
+C-c C-c 设为root dir
+U   前往父目录
 
+C-x { / } 调整窗口
 
 
