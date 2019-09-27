@@ -112,7 +112,7 @@ There are two things you can do about this warning:
 (require 'projectile)
 (projectile-global-mode)
 (setq projectile-enable-caching t)
-(global-set-key (kbd "C-c f") 'projectile-find-file)
+;;(global-set-key (kbd "C-c f") 'projectile-find-file)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -129,8 +129,19 @@ There are two things you can do about this warning:
      ("~/GTD/books.org" :level . 1)
      ("~/GTD/project.org" :level . 1)
      ("~/GTD/notes.org" :level . 1))))
- '(package-selected-packages (quote (yasnippet js2-mode ggtags company ace-window))))
+ '(package-selected-packages
+   (quote
+    (helm-projectile helm treemacs yasnippet js2-mode ggtags company ace-window))))
 
+;;helm
+(global-set-key (kbd "C-x x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-c p f") 'helm-projectile)
+
+
+;;treemacs
+(global-set-key (kbd "<f8>") 'treemacs)
 
 ;;switch-window
 (add-to-list 'load-path "~/.emacs.d/switch-window/")

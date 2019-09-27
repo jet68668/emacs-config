@@ -24,11 +24,6 @@ M-, 定义跳回
 ggtags-find-tag-dwim 查找定义
 M-n M-p next/prev match
 
-neo-tree
-[f8]  open-neo-tree
-C-c C-c 设为root dir
-U   前往父目录
-
-C-x { / } 调整窗口
-
-
+helm treemacs
+F8  treemacs
+C-c p f   工程内查找文件
