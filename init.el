@@ -117,13 +117,18 @@ There are two things you can do about this warning:
      ("~/GTD/notes.org" :level . 1))))
  '(package-selected-packages
    (quote
-    (helm-projectile helm yasnippet js2-mode ggtags company ace-window))))
+    (counsel-projectile counsel yasnippet js2-mode ggtags company ace-window))))
 
-;;helm
-(global-set-key (kbd "C-x x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
-(global-set-key (kbd "C-c p f") 'helm-projectile)
+;;counsel
+(ivy-mode 1)
+(global-set-key (kbd "C-x x") 'counsel-M-x)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "C-c p f") 'counsel-projectile-find-file-dwim)
+(global-set-key (kbd "C-x C-b") 'counsel-ibuffer)
+(global-set-key (kbd "C-c p p") 'counsel-projectile-switch-project)
+(global-set-key (kbd "C-x b") 'counsel-switch-buffer)
+(global-set-key (kbd "C-s") 'swiper)
 
 ;;neotree
 (add-to-list 'load-path "~/.emacs.d/emacs-neotree")
@@ -131,5 +136,8 @@ There are two things you can do about this warning:
 (global-set-key (kbd "<f8>") 'neotree-toggle)
 
 ;;imenu
-(global-set-key (kbd "<f7>") 'helm-imenu)
+(global-set-key (kbd "<f7>") 'counsel-imenu)
 (global-set-key (kbd "C-x t") 'helm-imenu-in-all-buffers)
+
+;;highlight ()
+(show-paren-mode 1)
