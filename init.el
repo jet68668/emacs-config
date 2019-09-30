@@ -74,21 +74,7 @@ There are two things you can do about this warning:
 ;;  (condition-case nil (imenu-add-to-menubar "myImenu") (error nil)))
 ;; (add-hook 'font-lock-mode-hook 'try-to-add-imenu)
 
-;;tag-list speedbar-case
-(add-to-list 'load-path "~/.emacs.d/sr-speedbar/")
-(require 'sr-speedbar)
-(global-set-key (kbd "<f7>") 'taglist-open)
-
-(defun taglist-open()
-  (interactive)
-  (if (sr-speedbar-exist-p)
-      (sr-speedbar-close)
-    (progn
-      (sr-speedbar-open)
-      (sr-speedbar-select-window))))
-
 ;;go-mode
-
 (add-to-list 'load-path "~/.emacs.d/go-mode")
 (require 'go-mode-autoloads)
 
@@ -131,7 +117,7 @@ There are two things you can do about this warning:
      ("~/GTD/notes.org" :level . 1))))
  '(package-selected-packages
    (quote
-    (helm-projectile helm treemacs yasnippet js2-mode ggtags company ace-window))))
+    (helm-projectile helm yasnippet js2-mode ggtags company ace-window))))
 
 ;;helm
 (global-set-key (kbd "C-x x") 'helm-M-x)
@@ -139,11 +125,11 @@ There are two things you can do about this warning:
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-c p f") 'helm-projectile)
 
+;;neotree
+(add-to-list 'load-path "~/.emacs.d/emacs-neotree")
+(require 'neotree)
+(global-set-key (kbd "<f8>") 'neotree-toggle)
 
-;;treemacs
-(global-set-key (kbd "<f8>") 'treemacs)
-
-;;switch-window
-(add-to-list 'load-path "~/.emacs.d/switch-window/")
-(require 'switch-window)
-(global-set-key (kbd "C-x w") 'switch-window)
+;;imenu
+(global-set-key (kbd "<f7>") 'helm-imenu)
+(global-set-key (kbd "C-x t") 'helm-imenu-in-all-buffers)

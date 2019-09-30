@@ -15,6 +15,7 @@ C-c ? 当前表格位置
  C-x r c 矩形清除，保留空白
  C-x r k 矩形删除，不保留
  C-x r t 前插入字符
+ M-p ace-windows 切换窗口
 
 跳转 （安装global并执行gtags）
 M-r 本页上中下跳转
@@ -24,6 +25,11 @@ M-, 定义跳回
 ggtags-find-tag-dwim 查找定义
 M-n M-p next/prev match
 
-helm treemacs
-F8  treemacs
-C-c p f   工程内查找文件
+helm neotree
+F8  neotree
+U 父目录
+C-c C-c 设为root
+C-c p f   工程内查找
+
+菜单
+F10 or M-`
