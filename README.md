@@ -24,6 +24,7 @@ M-. 定义跳转
 M-, 定义跳回
 ggtags-find-tag-dwim 查找定义
 M-n M-p next/prev match
+C-M-n/p  对应括号跳转
 
 helm neotree
 F8  neotree

@@ -34,7 +34,7 @@ There are two things you can do about this warning:
 (add-to-list 'load-path "~/.emacs.d/color-theme/")
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-midnight)
+;(color-theme-midnight)
 
 
 (global-set-key (kbd "C-x w") 'other-window)
@@ -141,3 +141,4 @@ There are two things you can do about this warning:
 
 ;;highlight ()
 (show-paren-mode 1)
+(global-hi-lock-mode 1)
