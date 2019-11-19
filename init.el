@@ -22,10 +22,10 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
-;;(setq inferior-lisp-program "/usr/local/bin/sbcl")
-;;(add-to-list 'load-path "~/.emacs.d/slime/")
-;;(require 'slime-autoloads)
-;;(slime-setup '(slime-fancy))
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(add-to-list 'load-path "~/.emacs.d/slime/")
+(require 'slime-autoloads)
+(slime-setup '(slime-fancy))
 
 (setq make-backup-files nil)
 (setq auto-save-default nil) 
@@ -41,7 +41,7 @@ There are two things you can do about this warning:
 (global-unset-key (kbd "C-x C-b"))
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 (global-set-key (kbd "C-x x") 'execute-extended-command)
-(global-set-key (kbd "C-x g") 'goto-line)
+(global-set-key (kbd "C-c g") 'goto-line)
 
 (add-to-list 'load-path "~/.emacs.d/my-config/")
 ;;use latex to export pdf file in org-mode
@@ -142,3 +142,6 @@ There are two things you can do about this warning:
 ;;highlight ()
 (show-paren-mode 1)
 (global-hi-lock-mode 1)
+
+;;git-emacs
+(global-set-key (kbd "C-x g") 'magit-status)

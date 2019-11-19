@@ -7,3 +7,6 @@
 [submodule "emacs-neotree"]
 	path = emacs-neotree
 	url = https://github.com/jaypei/emacs-neotree.git
+[submodule "slime"]
+	path = slime
+	url = https://github.com/slime/slime.git
