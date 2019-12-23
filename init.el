@@ -145,3 +145,9 @@ There are two things you can do about this warning:
 
 ;;git-emacs
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; 4 for tab
+(setq default-tab-width 4)
+(setq-default indent-tabs-mode nil)
+(setq c-default-style "linux")
+(setq c-basic-offset 4)
